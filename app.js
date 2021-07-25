@@ -55,7 +55,7 @@ async function getResults() {
 
 
         results = await respone.json();
-        count.textContent = results.length;
+        count.textContent = results.meals.length;
 
         if (results.meals !== null) {
             displayReults();
