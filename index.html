@@ -1,76 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>food & Ingridents</title>
 </head>
+
 <body>
+    <div id="wrap">
+        <h1>list of day meals : <span id="date"></span></h1>
 
-  <div id="wrap">
+        <span>there is : <b class="count">0</b> meals showed</span>
 
+        <div class="alphabet">
+            <h3>choose Your meal !</h3>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>I</li>
+                <li>J</li>
+                <li>K</li>
+                <li>L</li>
+                <li>M</li>
+                <li>N</li>
+                <li>O</li>
+                <li>P</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>S</li>
+                <li>T</li>
+                <li>U</li>
+                <li>V</li>
+                <li>W</li>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+            </ul>
+        </div>
 
-<h1>list of day meals : <span id="date"></span></h1>
+        <div class="searchMeals" id="searchMeals">
+            <form action="">
+                <input type="text" name="" id="search" placeholder="search for meal" />
+                <input type="submit" value="search" />
+            </form>
+            <span class="searchResults">found : 0 result</span>
+        </div>
 
-<span>there is : <b class="count">0</b> meals showed</span>
+        <div class="mealsList" id="mealsList"></div>
+    </div>
 
-<div class="alphabet">
-  <h3>choose Your meal !</h3>
-    <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
-        <li>F</li>
-        <li>G</li>
-        <li>H</li>
-        <li>I</li>
-        <li>J</li>
-        <li>K</li>
-        <li>L</li>
-        <li>M</li>
-        <li>N</li>
-        <li>O</li>
-        <li>P</li>
-        <li>Q</li>
-        <li>R</li>
-        <li>S</li>
-        <li>T</li>
-        <li>U</li>
-        <li>V</li>
-        <li>W</li>
-        <li>X</li>
-        <li>Y</li>
-        <li>Z</li>
-    </ul>
-</div>
-<div class="mealsList" id="mealsList">
+    <div id="loader"></div>
 
-
-    
-
-
-</div>
-
-
-
-  </div>
-
-
-  <div id="loader"></div>
-
-
-  <script src="app.js"></script>
-
-    
+    <script src="app.js"></script>
 </body>
+
 </html>

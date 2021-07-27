@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
-
 body {
     font-family: "Inter", sans-serif;
     background-color: whitesmoke;
@@ -15,18 +14,15 @@ body {
     background-color: #fff;
     padding: 15px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-
     h1 {
         text-align: center;
         padding: 0;
         margin: 0;
         font-size: 1.3rem;
-
         span {
             display: inline-block;
         }
     }
-
     span {
         display: block;
         margin: 0 auto;
@@ -40,7 +36,6 @@ body {
     column-gap: 5px;
     padding: 10px 0;
     margin: 0;
-
     li {
         list-style: none;
         flex: 1 1 auto;
@@ -86,7 +81,7 @@ body {
     padding: 15px 0;
 }
 
-#mealsList {
+.mealsList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
@@ -96,6 +91,10 @@ body {
             width: 100%;
         }
     }
+}
+
+.searchGrid {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .popUp {
@@ -108,7 +107,6 @@ body {
     bottom: 0;
     margin: 2.5vh auto;
     background-color: #fff;
-
     &::before {
         content: "";
         display: block;
@@ -121,16 +119,14 @@ body {
         right: 0;
         background-color: rgba(0, 0, 0, 0.85);
     }
-
     img {
         width: 100%;
         position: relative;
         height: 100%;
         z-index: 5;
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
         border-radius: 5px;
         object-fit: cover;
-       
     }
     span {
         display: block;
@@ -146,15 +142,82 @@ body {
         font-weight: bold;
         right: 50px;
         content: "x";
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
         z-index: 6;
         line-height: 30px;
-        transition: all .3s;
+        transition: all 0.3s;
         cursor: pointer;
-
         &:hover {
-        background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0, 0, 0, 0.6);
         }
+    }
+}
+
+.searchMeals {
+    width: 60%;
+    padding: 10px 0;
+    margin: 0 auto;
+    * {
+        box-sizing: border-box;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(12, auto);
+        margin-bottom: 15px;
+        input[type="text"] {
+            padding: 12.5px;
+            margin: 0;
+            border: 1px solid #ccc;
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            grid-column: 1/10;
+        }
+        input[type="submit"] {
+            width: auto;
+            padding: 12.5px;
+            margin: 0;
+            background-color: green;
+            color: #fff;
+            border: none;
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            grid-column: 10/-1;
+        }
+    }
+    .searchResults {
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 5px 15px;
+        font-size: 0.85rem;
+        margin: 15px auto;
+    }
+}
+
+.itemResult {
+    img {
+        width: 100%;
+        max-width: 100%;
+        background-blend-mode: overlay(#000, 10%);
+    }
+    h1 {
+        text-align-last: left;
+        font-size: 1.3rem;
+    }
+    span {
+        height: 35px;
+        overflow: hidden;
+        text-align: right;
+    }
+    a {
+        display: block;
+        width: 150px;
+        padding: 10px;
+        background-color: orange;
+        border-radius: 50px;
+        margin: 10px 0;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
     }
 }
