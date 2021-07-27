@@ -231,24 +231,26 @@ body {
   margin: 15px auto;
 }
 
-.itemResult img {
+div.itemResult img {
   width: 100%;
   max-width: 100%;
   background-blend-mode: overlay(#000, 10%);
 }
 
-.itemResult h1 {
+div.itemResult h1 {
   text-align-last: left;
-  font-size: 1.3rem;
+  font-size: 1.1rem !important;
 }
 
-.itemResult span {
+div.itemResult span {
   height: 35px;
   overflow: hidden;
-  text-align: right;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 
-.itemResult a {
+div.itemResult a {
   display: block;
   width: 150px;
   padding: 10px;

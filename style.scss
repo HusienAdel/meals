@@ -194,7 +194,7 @@ body {
     }
 }
 
-.itemResult {
+div.itemResult {
     img {
         width: 100%;
         max-width: 100%;
@@ -202,12 +202,14 @@ body {
     }
     h1 {
         text-align-last: left;
-        font-size: 1.3rem;
+        font-size: 1.1rem !important;
     }
     span {
         height: 35px;
         overflow: hidden;
-        text-align: right;
+        text-align: left;
+        padding: 0;
+        margin: 0;
     }
     a {
         display: block;

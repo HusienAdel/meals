@@ -12,6 +12,7 @@ const loader = document.querySelector("#loader");
 let searchText;
 let SearchApi = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
 const searchForm = document.querySelector("#searchMeals form");
+const searchresultCount = document.querySelector(".searchResults");
 
 searchForm.addEventListener("submit", searchResults);
 
@@ -24,7 +25,11 @@ async function searchResults(e) {
 
     try {
         const searchData = await searchReuslts.json();
+
+        loaderShow();
+
         displaySearchResults(searchData);
+        loaderHide();
     } catch (err) {
         console.log(err);
     }
@@ -33,9 +38,18 @@ async function searchResults(e) {
 function displaySearchResults(data) {
     mealList.innerHTML = ``;
 
-    data.meals.forEach((item) => {
-        buildSearchUI(item);
-    });
+    searchresultCount.innerHTML = `
+found : ${data.meals.length} reslut`;
+
+    if (data.meals) {
+        data.meals.forEach((item) => {
+            buildSearchUI(item);
+        });
+    } else {
+        alert("no data found");
+    }
+
+    searchForm.reset();
 }
 
 function buildSearchUI(item) {
