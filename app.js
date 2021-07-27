@@ -158,5 +158,17 @@ function imageUp(e) {
         close.addEventListener("click", (e) => {
             pop.hidden = true;
         });
+
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'Escape') {
+
+               pop.hidden = true;
+            }
+
+        })
+
+        
     }
 }
+

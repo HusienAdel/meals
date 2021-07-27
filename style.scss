@@ -89,6 +89,7 @@ body {
     .meal {
         img {
             width: 100%;
+             cursor: pointer;
         }
     }
 }
@@ -127,6 +128,7 @@ body {
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
         border-radius: 5px;
         object-fit: cover;
+      
     }
     span {
         display: block;
